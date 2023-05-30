@@ -1,0 +1,37 @@
+# logging 설정
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: debug
+
+# console 색상
+spring:
+  profiles:
+    include: oauth
+  output:
+    ansi:
+      enabled: always
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            client-id: 614844895665-ve205hfqk4si028f4fg1nhlhfu0cv26r.apps.googleusercontent.com
+#            scope:
+#              - email
+#              - profile
+
+# 오류 처리
+server:
+  error:
+    include-exception: true
+    include-stacktrace: always
+
+  #port 설정
+  port: 8080
